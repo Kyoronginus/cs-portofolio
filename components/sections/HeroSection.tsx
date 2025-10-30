@@ -17,7 +17,7 @@ export default function HeroSection() {
       {/* これがセクション全体に広がる画像になります */}
       <Image
         // ★ あなたの写真のパスに変更してください
-        src="/images/myphoto_cropped.jpg"
+        src="/images/hero_background.jpg"
         alt="Hero background image"
         fill
         style={{ objectFit: 'cover' }}
