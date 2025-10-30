@@ -46,7 +46,6 @@ export const projectsData: Project[] = [
     liveSiteUrl: "https://uchinokokawaii.netlify.app/",
   },
 
-  // --- プロジェクト 2 (ダミー) ---
   {
     id: 2,
     title: "Fibonacci Detection",
