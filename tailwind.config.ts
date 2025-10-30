@@ -16,7 +16,8 @@ const config: Config = {
 
         // ★私たちが追加した縞模様
         'scanline-white':
-          'repeating-linear-gradient(to bottom,theme(colors.white) 0px,theme(colors.white) 2px,transparent 2px,transparent 4px)',
+          "bg-[repeating-linear-gradient(135deg,#333333_0px,#333333_2px,transparent_2px,transparent_4px)]",
+        'header-texture': "url('/images/header_texture.png')",
       },
     },
   },

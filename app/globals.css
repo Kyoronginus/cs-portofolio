@@ -3,6 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+.bg-fixed-texture {
+  background-image: url('/images/criss_cross.png');
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  /* background-blend-mode: multiply; */ /* Temporarily comment out */
+}
+
+.bg-header-texture {
+  background-image: url('/images/header_texture.png');
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -120,3 +132,5 @@
     @apply bg-background text-foreground;
   }
 }
+
+

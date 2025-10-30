@@ -24,11 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-fixed-texture`}
       >
         {/* Fixed Navigation Header */}
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-800">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black ">
           <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="text-xl font-bold">Portfolio</div>
@@ -46,6 +47,11 @@ export default function RootLayout({
                 <li>
                   <a href="#education" className="text-white hover:text-gray-300 transition-colors">
                     Education
+                  </a>
+                </li>
+                <li>
+                  <a href="#experience" className="text-white hover:text-gray-300 transition-colors">
+                    Experience
                   </a>
                 </li>
               </ul>
