@@ -1,6 +1,6 @@
 // app/page.tsx
 import HeroSection from '@/components/sections/HeroSection';
-import ProjectsSection from '@/components/sections/ProjectSection';
+import ProjectsSection from '@/components/sections/Project/ProjectSection';
 import EducationSection from '@/components/sections/EducationSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 
