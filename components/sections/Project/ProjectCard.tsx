@@ -80,7 +80,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     {/* 2a. タイトルと説明 (左側2カラム分) */}
                     <div className="md:col-span-2">
                         <div className="flex items-center">
-                            <h3 className="text-9xl font-bold mb-4 text-[#000000]">
+                            <h3 className="text-9xl font-bold mb-4 text-[#000000] mb-10">
                                 {project.title} {/* ★ props から */}
                             </h3>
 

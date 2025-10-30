@@ -65,14 +65,14 @@ export default function ProjectsSection() {
           px-6 md:px-12 
           text-transparent bg-clip-text
           bg-[repeating-linear-gradient(135deg,#808080_0px,#808080_3px,transparent_3px,transparent_12px)]
-          -mt-2 -z-20 
+          -mt-2 -z-20
         ">
           PROJECTS
         </h2>
 
         {/* 2色のライン (変更なし) */}
         <div className="
-          h-6 
+          h-6
           mr-150 ml-14
           bg-[linear-gradient(to_right,#000000_20%,#fdfd1f_20%)]
           mb-16 
