@@ -109,7 +109,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                                         className={
                                             index < 2
                                                 ? "bg-[#fdfd1f]/90 px-4 py-2 rounded-lg text-sm font-mono"
-                                                : "bg-gray-700/50 px-4 py-2 rounded-lg text-sm font-mono"
+                                                : "bg-gray-300 px-4 py-2 rounded-lg text-sm font-mono"
                                         }
                                     >
                                         {tech}
