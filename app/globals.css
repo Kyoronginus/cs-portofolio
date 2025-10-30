@@ -15,6 +15,49 @@
   background-image: url('/images/header_texture.png');
 }
 
+/* マスコットが左右にスライドするアニメーション */
+@keyframes slide-horizontal {
+  0%, 100% {
+    transform: translateX(0); /* 開始と終了は元の位置 */
+  }
+  50% {
+    transform: translateX(30px); /* 中央で右に30px移動 */
+  }
+}
+
+/* アニメーションを適用するTailwindクラス */
+.animate-slide-horizontal {
+  animation: slide-horizontal 3s ease-in-out infinite alternate;
+  /*
+    slide-horizontal: アニメーション名
+    5s: 5秒かけて一往復
+    ease-in-out: 最初と最後がゆっくり、途中が速く
+    infinite: 無限に繰り返す
+    alternate: 行ったり来たり（0%から50%、そして50%から0%へ）
+  */
+}
+
+@keyframes rotate-stepped {
+  0% {
+    transform: rotate(-10deg); /* 0度は元の位置 */
+  }
+  100% {
+    transform: rotate(10deg); /* 360度（元の位置）に戻る */
+  }
+}
+
+/* アニメーションを適用するTailwindクラス */
+.animate-rotate-stepped {
+  animation: rotate-stepped 0.7s infinite alternate;
+  /*
+    rotate-stepped: アニメーション名
+    4s: 4秒かけて一周
+    linear: 一定の速度で（途中で止まらないように）
+    infinite: 無限に繰り返す
+    alternate: （今回は不要、常に時計回りにしたい場合）
+  */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

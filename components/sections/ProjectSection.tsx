@@ -1,5 +1,6 @@
 import YouTubeFacade from "../YoutubeFacade";
 import InteractiveModel from "../3d/InteractiveModel";
+import Image from "next/image";
 
 export default function ProjectsSection() {
   return (
@@ -38,7 +39,7 @@ export default function ProjectsSection() {
       ">
         {/* "PROJECTS" のタイトル */}
         <h2 className="
-          text-[14rem] font-bold text-left mb-10
+          text-[14rem] font-bold text-left
           px-6 md:px-12                     // 左右のパディングでフチから離す
           text-transparent bg-clip-text
           bg-[repeating-linear-gradient(135deg,#808080_0px,#808080_3px,transparent_3px,transparent_12px)]
@@ -47,7 +48,14 @@ export default function ProjectsSection() {
           PROJECTS
         </h2>
 
-
+        {/* ▼▼▼ 2色のラインをここに追加 ▼▼▼ */}
+        <div className="
+          h-6           /* 線の高さ (2px) */
+          mr-150 ml-14
+          bg-[linear-gradient(to_right,#000000_20%,#fdfd1f_20%)]
+          mb-16           /* ★ 4. 線とカードの間のマージン */
+        "></div>
+        {/* ▲▲▲ ここまで ▲▲▲ */}
 
 
         {/* Dummy project card - will be replaced with carousel in Step 2 */}
@@ -61,16 +69,43 @@ export default function ProjectsSection() {
           - border border-white/20: 20%の白いボーダーで輪郭を定義
         */}
           <div className="
-          p-0 md:p-8
+          p-0 md:p-8 relative
           "
           >
             {/* 2c. VIDEO PREVIEW (プレースホルダー) */}
-            <div className="aspect-video bg-black/50 rounded-lg mb-8 overflow-hidden">
+            <div className="
+            aspect-video -mt-20
+            bg-black/50 rounded-lg mb-8 
+            overflow-hidden
+            ">
               <YouTubeFacade
                 videoId="XtBh7hxNGUM" // ★ 2. videoId を渡す
                 title="UCHINOKO KAWAII"  // ★ 3. title を渡す
               ></YouTubeFacade>
             </div>
+
+
+
+            {/* ▼▼▼ マスコット画像をここに追加 ▼▼▼ */}
+            <Image
+              src="/images/github_cat.png" // ★ 3. マスコット画像のパス
+              alt="Mascot peeking"
+              width={500} // ★ 4. 画像の幅を適宜調整
+              height={500} // 画像の高さを適宜調整
+              className="
+                absolute         /* ★ 5. 絶対配置 */
+                -z-10              /* ★ 6. 動画カードより奥に */
+                -mt-100
+                top-0
+                right-0
+                animate-slide-horizontal /* ★ 10. 定義したアニメーションを適用 */
+                pointer-events-none /* マスコットがクリックの邪魔にならないように */
+              "
+            />
+            {/* ▲▲▲ ここまで ▲▲▲ */}
+
+
+
             {/* 2. メインコンテンツ (Gridレイアウト)
               - md:grid-cols-3: PCでは3カラムのグリッド
             */}
@@ -78,11 +113,30 @@ export default function ProjectsSection() {
 
               {/* 2a. タイトルと説明 (左側2カラム分) */}
               <div className="md:col-span-2">
-                <h3 className="text-9xl font-bold mb-4 text-[#000000]">
-                  UCHINOKO KAWAII
-                </h3>
-                <p className="text-3xl text-gray-900 mb-8 text-lg">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat nobis ratione labore qui! Ea necessitatibus expedita sunt dolorum natus sit deleniti obcaecati tempore placeat, modi alias corrupti. Nihil, provident accusantium! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla veritatis illo dignissimos, eum sit eos voluptatem ullam tempore quia dolorum incidunt nemo provident tempora. Quae doloribus debitis facilis impedit reiciendis.
+                <div className="flex items-center">
+                  <h3 className="text-9xl font-bold mb-4 text-[#000000]">
+                    UCHINOKO KAWAII
+                  </h3>
+
+                  {/* ▼▼▼ マスコット画像をここに追加 ▼▼▼ */}
+                  <Image
+                    src="/images/venna_chibi.png" // ★ 3. マスコット画像のパス
+                    alt="Mascot peeking"
+                    width={300} // ★ 4. 画像の幅を適宜調整
+                    height={300} // 画像の高さを適宜調整
+                    className="
+                    z-0              /* ★ 6. 動画カードより奥に */
+                    mr-10
+                    animate-rotate-stepped
+                    pointer-events-none /* マスコットがクリックの邪魔にならないように */
+                  "
+                  />
+                  {/* ▲▲▲ ここまで ▲▲▲ */}
+
+                </div>
+
+                <p className="text-4xl text-gray-900 mb-8 text-lg">
+                  This project is an interactive website built to showcase the charm of my Original Character, Venna. It combines the retro aesthetic of 2D pixel art with modern 3D graphics and physics to create immersive visuals. All assets in this project were created by myself. Three.js is the core of this project, demonstrates a deep understanding of scene setup, lighting, shadows, materials, and managing 3D objects. Additional technologies such as draco-compression extraction and the usage of .webp to shorten the page loading time are applied.
                 </p>
 
                 {/* Techstacks */}
