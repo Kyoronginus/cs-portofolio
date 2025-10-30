@@ -15,4 +15,4 @@ export function Model(props) {
   )
 }
 
-useGLTF.preload('/fibonacci_logo.glb')
+useGLTF.preload('/3d_models/fibonacci_logo.glb')
