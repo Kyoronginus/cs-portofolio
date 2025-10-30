@@ -85,9 +85,9 @@ export default function ProjectsSection() {
           <button 
             onClick={handlePrevious} // ★ 戻るロジックを紐付け
             className="
-              bg-black text-yellow-400 border border-yellow-400 
+              bg-black text-yellow-400
               hover:bg-gray-800 hover:text-white
-              w-10 h-10 rounded-full flex items-center justify-center
+              w-14 h-14 rounded-full flex items-center justify-center
               transition-colors
             "
             aria-label="Previous project"
@@ -97,9 +97,9 @@ export default function ProjectsSection() {
           <button 
             onClick={handleNext} // ★ 次へロジックを紐付け
             className="
-              bg-black text-yellow-400 border border-yellow-400 
+              bg-black text-yellow-400
               hover:bg-gray-800 hover:text-white
-              w-10 h-10 rounded-full flex items-center justify-center
+              w-14 h-14 rounded-full flex items-center justify-center
               transition-colors
             "
             aria-label="Next project"
