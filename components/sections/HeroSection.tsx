@@ -11,6 +11,7 @@ export default function HeroSection() {
         bg-black text-white
         relative      /* ★ 1. 親コンテナを 'relative' に（重要）*/
         overflow-hidden /* はみ出し防止 */
+        -mt-4
       "
     >
       {/* 1. 背景画像 (奥) */}

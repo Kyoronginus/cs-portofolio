@@ -17,7 +17,7 @@ export default function InteractiveModel() {
         {/* 5. <Stage> がモデルを自動で中央に配置し、
              適切な照明と影を追加してくれます。
         */}
-        <Stage environment="city" intensity={0.6} shadows = {false}>
+        <Stage environment="city" intensity={0.9} shadows = {false}>
           <Model /> {/* 6. <Box> を <MyModel /> に差し替え */}
         </Stage>
       </Suspense>

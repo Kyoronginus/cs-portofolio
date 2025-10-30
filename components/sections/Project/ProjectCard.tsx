@@ -2,6 +2,7 @@ import YouTubeFacade from "../../YoutubeFacade";
 import Image from "next/image";
 import InteractiveModel from "../../3d/InteractiveModel";
 import FibonacciModel from "../../3d/fibonacciModel";
+import MimuchiModel from "../../3d/MimuchiModel";
 import { type Project } from "../../../app/data/projects";
 
 // 1つのプロジェクトデータを 'project' prop として受け取る
@@ -14,6 +15,9 @@ export default function ProjectCard({ project }: { project: Project }) {
 
             case "FibonacciModel":
                 return <FibonacciModel />;
+
+            case "MimuchiModel":
+                return <MimuchiModel />;
 
             case "Placeholder":
                 return (
@@ -141,7 +145,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                     <a href={project.liveSiteUrl} target="_blank" rel="noopener noreferrer"> {/* ★ props から */}
                         <button className="
 
-              bg-yellow-400 text-black px-10 py-3 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
+                            bg-[#fdfd35] text-black px-10 py-3 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
                             VISIT
                         </button>
                     </a>
