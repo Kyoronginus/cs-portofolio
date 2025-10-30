@@ -49,26 +49,31 @@ export default function RootLayout({
         <header className="fixed top-0 left-0 right-0 z-50 bg-black">
           <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
-              <div className="text-xl font-bold">Portfolio</div>
+              <div className="text-xl font-bold">PORTFOLIO'25</div>
               <ul className="flex gap-8">
                 <li>
-                  <a href="#hero" className="text-white hover:text-gray-300 transition-colors">
-                    Home
+                  <a href="#hero" className="text-white font-bold hover:text-gray-300 transition-colors">
+                    HOME
                   </a>
                 </li>
                 <li>
-                  <a href="#projects" className="text-white hover:text-gray-300 transition-colors">
-                    Projects
+                  <a href="#about" className="text-white font-bold hover:text-gray-300 transition-colors">
+                    ABOUT
                   </a>
                 </li>
                 <li>
-                  <a href="#education" className="text-white hover:text-gray-300 transition-colors">
-                    Education
+                  <a href="#projects" className="text-white font-bold hover:text-gray-300 transition-colors">
+                    PROJECTS
                   </a>
                 </li>
                 <li>
-                  <a href="#experience" className="text-white hover:text-gray-300 transition-colors">
-                    Experience
+                  <a href="#certification" className="text-white font-bold hover:text-gray-300 transition-colors">
+                    CERTIFICATION
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-white font-bold hover:text-gray-300 transition-colors">
+                    CONTACT
                   </a>
                 </li>
               </ul>

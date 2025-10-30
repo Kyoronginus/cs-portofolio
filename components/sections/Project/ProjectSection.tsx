@@ -53,7 +53,7 @@ export default function ProjectsSection() {
         className="
           w-20 lg:w-32
           bg-[#fdfd1f]
-          -z-10
+          -z-20
           flex-shrink-0
           relative overflow-hidden
         "
