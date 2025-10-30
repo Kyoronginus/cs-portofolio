@@ -1,5 +1,8 @@
-import type { Metadata } from "next";
+'use client';
 import { Geist, Geist_Mono } from "next/font/google";
+import { useEffect } from 'react';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,24 +15,38 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "My CS Portfolio",
-  description: "Computer Science Portfolio",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.1,
+      duration: 1.2,
+      smoothWheel: true,
+      // smoothTouch: false,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <html lang="en">
-    
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased text-white bg-fixed-texture`}
       >
         {/* Fixed Navigation Header */}
-        <header className="fixed top-0 left-0 right-0 z-50 bg-black ">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-black">
           <nav className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="text-xl font-bold">Portfolio</div>
@@ -59,7 +76,6 @@ export default function RootLayout({
           </nav>
         </header>
 
-        {/* Main content with padding to account for fixed header */}
         <div className="pt-16">
           {children}
         </div>
@@ -67,3 +83,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -109,6 +109,6 @@ export const projectsData: Project[] = [
         description: "SchedulingApp is a Collaborative Calendar platform designed to streamline team schedule management by leveraging advanced AWS serverless architecture. Built on AWS Amplify, the application integrates core AWS services to deliver a seamless, efficient, and real-time scheduling experience. Key features include Real-Time Schedule Synchronization via AWS AppSync and a GraphQL API, ensuring instant updates across all team members. Integrated Authentication managed by Amazon Cognito provides secure user registration and identity management. All scheduling data is stored in the highly scalable, non-relational Amazon DynamoDB, while user assets and multimedia files are managed by Static Storage in Amazon S3. Business Logic is handled by serverless AWS Lambda functions, which act as linked providers for complex tasks and notifications. Finally, all system activities are logged and monitored in Amazon CloudWatch, enabling efficient debugging and operational health checks.",
         techstacks: ["Flutter", "AWS", "AWS S3", "AWS DynamoDB",  "AWS Cognito", "AWS Amplify", "GraphQL",],
         modelComponentName: "MimuchiModel",
-        liveSiteUrl: "https://coloranalyzer-648561351861.us-central1.run.app/",
+        liveSiteUrl: "https://github.com/Kyoronginus/schedulingapp",
     },
 ];

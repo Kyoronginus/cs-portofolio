@@ -5,7 +5,44 @@
 @layer base {
   html {
     font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    scroll-behavior: smooth;
+    /* Enhanced smooth scrolling */
+    scroll-padding-top: 4rem;
   }
+  
+  /* Enable momentum scrolling on iOS */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Custom scrollbar with smooth feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #fdfd1f;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6e619;
+}
+
+/* Scroll snap for sections */
+section {
+  scroll-snap-align: start;
+}
+
+/* Add scroll snap to main container */
+main {
+  scroll-snap-type: y mandatory;
 }
 
 .bg-fixed-texture {

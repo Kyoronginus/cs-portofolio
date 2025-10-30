@@ -1,9 +1,12 @@
+"use client";
+
 import YouTubeFacade from "../../YoutubeFacade";
 import Image from "next/image";
 import InteractiveModel from "../../3d/InteractiveModel";
 import FibonacciModel from "../../3d/fibonacciModel";
 import MimuchiModel from "../../3d/MimuchiModel";
 import { type Project } from "../../../app/data/projects";
+import { motion, AnimatePresence } from "framer-motion";
 
 // 1つのプロジェクトデータを 'project' prop として受け取る
 export default function ProjectCard({ project }: { project: Project }) {
@@ -34,16 +37,24 @@ export default function ProjectCard({ project }: { project: Project }) {
         }
     };
     return (
-        <div className="w-full p-6">
-            {/* ★これが「透明なコンテナ」です
-          - bg-black/30: 背景を30%の黒（半透明）に
-          - backdrop-blur-md: 背景（テクスチャ画像）をぼかす (すりガラス効果)
-          - border border-white/20: 20%の白いボーダーで輪郭を定義
-        */}
-            <div className="
-          p-0 md:p-8 relative
-          "
+        <AnimatePresence mode="wait">
+            <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -50 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="w-full p-6"
             >
+                {/* ★これが「透明なコンテナ」です
+              - bg-black/30: 背景を30%の黒（半透明）に
+              - backdrop-blur-md: 背景（テクスチャ画像）をぼかす (すりガラス効果)
+              - border border-white/20: 20%の白いボーダーで輪郭を定義
+            */}
+                <div className="
+              p-0 md:p-8 relative
+              "
+                >
                 {/* 2c. VIDEO PREVIEW (プレースホルダー) */}
                 <div className="
             aspect-video -mt-20
@@ -98,7 +109,7 @@ export default function ProjectCard({ project }: { project: Project }) {
 
                         </div>
 
-                        <p className="text-4xl text-gray-900 mb-8 text-lg">
+                        <p className="text-4xl text-gray-900 mt-6 mb-8 text-lg">
                             {project.description} {/* ★ props から */}
                         </p>
 
@@ -140,18 +151,26 @@ export default function ProjectCard({ project }: { project: Project }) {
                 </div>
 
                 {/* VISIT ボタン */}
-                <div className="mt-10">
-
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="mt-10"
+                >
                     <a href={project.liveSiteUrl} target="_blank" rel="noopener noreferrer"> {/* ★ props から */}
-                        <button className="
-
-                            bg-[#fdfd35] text-black px-10 py-3 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">
+                        <motion.button
+                            whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(253, 253, 53, 0.5)" }}
+                            whileTap={{ scale: 0.95 }}
+                            className="
+                                bg-[#fdfd35] text-black px-10 py-3 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
+                        >
                             VISIT
-                        </button>
+                        </motion.button>
                     </a>
-                </div>
+                </motion.div>
 
             </div>
-        </div>
+        </motion.div>
+        </AnimatePresence>
     );
 }
