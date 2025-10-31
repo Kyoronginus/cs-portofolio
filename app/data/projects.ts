@@ -1,4 +1,4 @@
-// 各プロジェクトの型を定義
+
 export type Project = {
     id: number;
     title: string;
@@ -17,13 +17,11 @@ export type Project = {
     };
     description: string;
     techstacks: string[];
-    modelComponentName: string; // 3Dモデルのコンポーネント名を文字列で指定
+    modelComponentName: string; 
     liveSiteUrl: string;
 };
 
-// プロジェクトの全データ
 export const projectsData: Project[] = [
-    // --- プロジェクト 1 (UCHINOKO KAWAII) ---
     {
         id: 1,
         title: "UCHINOKO KAWAII",
@@ -49,8 +47,8 @@ export const projectsData: Project[] = [
     {
         id: 2,
         title: "Fibonacci Spiral Detection",
-        videoId: "V0SFSW5l_6s", // プレースホルダー
-        mascotVideo: { // このプロジェクトには不要なら null にしてもOK
+        videoId: "V0SFSW5l_6s",
+        mascotVideo: {
             src: "/images/github_cat.png",
             width: 500,
             height: 500,
@@ -71,8 +69,8 @@ export const projectsData: Project[] = [
     {
         id: 3,
         title: "ColorAnalyzer",
-        videoId: "3C9SHhFAqSw", // プレースホルダー
-        mascotVideo: { // このプロジェクトには不要なら null にしてもOK
+        videoId: "3C9SHhFAqSw",
+        mascotVideo: {
             src: "/images/github_cat.png",
             width: 500,
             height: 500,
@@ -84,7 +82,7 @@ export const projectsData: Project[] = [
             height: 300,
             className: "z-0 mr-5 animate-rotate-stepped pointer-events-none"
         },
-        description: "A web application that analyzes images to detect and visualize Fibonacci spirals in compositions. The app identifies key points in an image using contour detection by OpenCV, clusters them, and fits a logarithmic spiral that approximates the golden ratio. ",
+        description: "A web application built to optimize the color palettes within my illustration workflow. This tool provides visual data analysis of colors from any uploaded image, allowing me, as a part-time illustrator, to generate harmonious color schemes and deliver higher-quality, visually consistent artwork to clients.",
         techstacks: ["Python Flask", "GCP", "Docker", "Three.js", "PyQt"],
         modelComponentName: "MimuchiModel",
         liveSiteUrl: "https://coloranalyzer-648561351861.us-central1.run.app/",
@@ -93,8 +91,8 @@ export const projectsData: Project[] = [
     {
         id: 4,
         title: "SchedulingApp",
-        videoId: "hpGjd8psILc", // プレースホルダー
-        mascotVideo: { // このプロジェクトには不要なら null にしてもOK
+        videoId: "hpGjd8psILc",
+        mascotVideo: {
             src: "/images/github_cat.png",
             width: 500,
             height: 500,

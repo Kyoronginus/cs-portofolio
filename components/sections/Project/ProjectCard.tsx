@@ -8,7 +8,6 @@ import MimuchiModel from "../../3d/MimuchiModel";
 import { type Project } from "../../../app/data/projects";
 import { motion, AnimatePresence } from "framer-motion";
 
-// 1つのプロジェクトデータを 'project' prop として受け取る
 export default function ProjectCard({ project }: { project: Project }) {
     // Render the appropriate 3D model based on modelComponentName
     const renderModel = () => {
@@ -62,8 +61,8 @@ export default function ProjectCard({ project }: { project: Project }) {
             overflow-hidden
             ">
                     <YouTubeFacade
-                        videoId={project.videoId} // ★ props から
-                        title={project.title}       // ★ props から
+                        videoId={project.videoId} // props
+                        title={project.title}
                     />
                 </div>
 

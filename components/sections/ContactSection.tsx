@@ -20,19 +20,15 @@ export default function ContactSection() {
   const contactLinks = [
     {
       name: 'EMAIL',
-      href: 'mailto:tohru.sato@example.com'
+      href: 'mailto:tohrudj0711@gmail.com'
     },
     {
       name: 'LINKEDIN',
-      href: 'https://linkedin.com/in/tohru-sato'
+      href: 'https://www.linkedin.com/in/tohru-djunaedi-sato-163ab02b9/'
     },
     {
       name: 'GITHUB',
-      href: 'https://github.com/tohru-sato'
-    },
-    {
-      name: 'TWITTER / X',
-      href: 'https://twitter.com/tohru_sato'
+      href: 'https://github.com/Kyoronginus'
     }
   ];
 
@@ -168,25 +164,17 @@ export default function ContactSection() {
           >
 
           </motion.div>
-          {/* Name */}
-          {/* ★ 1. 'justify-center' と 'items-end' を追加 */}
           <div className='flex justify-center items-end text-center gap-x-4'>
-
             <p className='text-9xl font-bold text-gray-300'>
               TOHRU
             </p>
-
-            {/* ★ 2. 'my-4' (上下の余白) を追加 */}
-            <div className='mb-2'> {/* 下揃えのための微調整 */}
+            <div className='mb-2'>
               <p className="text-lg">
                 THIS SITE HAS BEEN CREATED USING <span className="font-bold text-white">NEXT.JS</span> BY
               </p>
-              {/* ★ 3. 'items-end' は親に移動したので削除 */}
               <p className='text-8xl font-bold text-gray-300'> DJUNAEDI </p>
             </div>
-
             <p className='text-9xl font-bold text-gray-300'>SATO</p>
-
           </div>
         </div>
       </footer>
