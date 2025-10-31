@@ -24,7 +24,6 @@ export default function AboutSection() {
       id="about"
       className="
         min-h-screen w-full
-        flex
         bg-black text-white
         relative
         overflow-hidden
@@ -88,20 +87,18 @@ export default function AboutSection() {
                   className="space-y-4 text-lg text-white-700 leading-relaxed"
                 >
                   <p>
-                    I'm Tohru Djunaedi Sato, a <span className="font-bold text-white">Computer Science student</span> passionate about
-                    creating innovative solutions through code. With a strong foundation in software development
-                    and a keen eye for design, I strive to build applications that are both functional and beautiful.
+                    I'm Tohru Djunaedi Sato, a <span className="font-bold text-white">CS student</span> at Bina Nusantara University. I'm passionate about
+                    creating innovative solutions through code.
                   </p>
 
                   <p>
                     My journey in tech has led me to explore various domains including <span className="font-bold text-white">web development</span>,
                     <span className="font-bold text-white"> machine learning</span>, and <span className="font-bold text-white">3D graphics</span>.
-                    I'm always eager to learn new technologies and take on challenging projects that push my boundaries.
+                    However, I've been exploring the world of frontend development recently, building website interfaces that provides immersive experience for the users.
                   </p>
-
+                  <p>Having lived in Japan for eight years before moving to Indonesia, I developed a multi-perspective approach to thinking and socializing. Let's work together on your next groundbreaking project.</p>
                   <p>
-                    When I'm not coding, you can find me exploring game design principles, experimenting with UI/UX concepts,
-                    or contributing to open-source projects. I believe in continuous learning and sharing knowledge with the community.
+
                   </p>
                 </motion.div>
               </div>
@@ -114,15 +111,18 @@ export default function AboutSection() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="pt-6"
               >
-                <h4 className="text-2xl font-bold mb-4 text-white">Interests & Skills</h4>
+                <h4 className="text-2xl font-bold mb-4 text-white">SKILLS</h4>
                 <div className="flex flex-wrap gap-3">
                   {[
-                    'Web Development',
-                    'Machine Learning',
-                    '3D Graphics',
-                    'UI/UX Design',
-                    'Game Development',
-                    'Open Source'
+                    'NEXT.JS',
+                    'THREE.JS',
+                    'REACT',
+                    'REACT THREE FIBER',
+                    'FIGMA',
+                    'CANNON.JS/ES', "DREI",
+                    "HTML/CSS",'GCP','AWS',"TAILWIND",
+                    "SEO Optimization",
+                    "FLUTTER (DART)","FLASK", "AXUM", "BLENDER", "PHOTOSHOP"
                   ].map((skill, index) => (
                     <motion.span
                       key={skill}
@@ -133,9 +133,9 @@ export default function AboutSection() {
                       whileHover={{ scale: 1.05, backgroundColor: '#fdfd1f' }}
                       className="
                         px-4 py-2
-                        bg-gray-200
-                        text-black font-semibold
-                        rounded-lg
+                        
+                        text-white font-semibold
+                        
                         border-2 border-gray-300
                         transition-colors
                         cursor-default
@@ -152,9 +152,28 @@ export default function AboutSection() {
         </div>
       </div>
 
-      <div className='mr-[100] my-20 flex-grow relative overflow-hidden py-10'>
-          <h1 className='text-right text-end text-xl'>50% ARTIST, 50% COMPUTER SCIENCE</h1>
-      </div>
+{/* ★ 2. 画面右下に絶対配置 */}
+    <motion.div 
+      className='
+        absolute
+        bottom-[80] right-10 /* 画面の右下から 10 (40px) の位置に配置 */
+        z-20                 /* メインコンテンツや背景より手前に */
+        max-w-lg md:max-w-lg /* 最大幅を指定して、長すぎないように */
+        p-12                  /* 内側の余白 */
+        text-right           /* テキストを右揃え */
+      '
+      initial={{ opacity: 0, y: 20 }} 
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, delay: 1.0 }} // 他のアニメーションより遅れて開始
+    >
+      <h1 className='text-xl font-bold text-white'>
+        FUN FACT
+      </h1>
+      <p className='mt-2 text-gray-300 text-justify '> {/* 上のマージンと、少し薄い色を追加 */}
+        As much as I love coding, I love drawing, too. All assets in this site including 2D artwork/3D models are created by me, there are no copyright-free assets used in this project.
+      </p>
+    </motion.div>
     </section>
   );
 }
