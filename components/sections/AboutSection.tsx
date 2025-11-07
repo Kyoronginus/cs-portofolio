@@ -1,4 +1,3 @@
-// components/sections/AboutSection.tsx
 "use client";
 
 import Image from 'next/image';
@@ -30,7 +29,7 @@ export default function AboutSection() {
         -z-10
       "
     >
-      {/* 1. 背景画像 (奥) with parallax effect */}
+      {/* bg image */}
       <motion.div
         className="absolute inset-0"
       >
@@ -152,25 +151,24 @@ export default function AboutSection() {
         </div>
       </div>
 
-{/* ★ 2. 画面右下に絶対配置 */}
     <motion.div 
       className='
         absolute
-        bottom-[80] right-10 /* 画面の右下から 10 (40px) の位置に配置 */
-        z-20                 /* メインコンテンツや背景より手前に */
-        max-w-lg md:max-w-lg /* 最大幅を指定して、長すぎないように */
-        p-12                  /* 内側の余白 */
-        text-right           /* テキストを右揃え */
+        bottom-[80] right-10
+        z-20
+        max-w-lg md:max-w-lg
+        p-12
+        text-right
       '
       initial={{ opacity: 0, y: 20 }} 
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.8, delay: 1.0 }} // 他のアニメーションより遅れて開始
+      transition={{ duration: 0.8, delay: 1.0 }}
     >
       <h1 className='text-xl font-bold text-white'>
         FUN FACT
       </h1>
-      <p className='mt-2 text-gray-300 text-justify '> {/* 上のマージンと、少し薄い色を追加 */}
+      <p className='mt-2 text-gray-300 text-justify '>
         As much as I love coding, I love drawing, too. All assets in this site including 2D artwork/3D models are created by me, there are no copyright-free assets used in this project.
       </p>
     </motion.div>

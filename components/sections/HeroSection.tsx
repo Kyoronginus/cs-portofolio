@@ -35,7 +35,7 @@ export default function HeroSection() {
         overflow-hidden
         -mt-4
       ">
-        {/* 1. 背景画像 (奥) with parallax effect */}
+        {/* 1. bg img with parallax effect */}
         <motion.div
           style={{ y: backgroundY, opacity }}
           className="absolute inset-0"
@@ -63,7 +63,6 @@ export default function HeroSection() {
         px-6 md:px-12              /* 左右のパディング */
       ">
 
-            {/* ★ 1. ここに 'w-full' を追加 */}
             <div className="w-full">
 
               <motion.h2

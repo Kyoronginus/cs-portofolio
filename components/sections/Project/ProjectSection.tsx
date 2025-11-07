@@ -1,12 +1,11 @@
-"use client"; // ★ 1. "use client" を追加 (useStateフックを使うため)
+"use client";
 
-import { useState, useRef } from "react"; // ★ 2. useState をインポート
+import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import { projectsData } from "@/app/data/projects";
+import { projectsData } from "@/components/sections/Project/projects";
 
 export default function ProjectsSection() {
-  // ★ 3. 現在のプロジェクト番号(インデックス)を管理するstateを定義
   const [currentIndex, setCurrentIndex] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -20,17 +19,10 @@ export default function ProjectsSection() {
   const sidebarX = useTransform(scrollYProgress, [0, 0.3], [-100, 0]);
   const titleOpacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0.5]);
 
-  // ★ 4. 「次へ」ボタンが押された時の処理
   const handleNext = () => {
-    // (現在の番号 + 1) を プロジェクトの総数で割った余り 
-    // これでリストの最後に達したら自動で0に戻ります (ループ)
     setCurrentIndex((prevIndex) => (prevIndex + 1) % projectsData.length);
   };
-
-  // ★ 5. 「戻る」ボタンが押された時の処理
   const handlePrevious = () => {
-    // もし最初のプロジェクト(0)なら、最後のプロジェクト(length - 1)に移動
-    // それ以外なら、単純に 1 引く
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projectsData.length - 1 : prevIndex - 1
     );
@@ -47,7 +39,7 @@ export default function ProjectsSection() {
         -mt-24
       "
     >
-      {/* 1. 左側のサイドバー with slide-in animation */}
+      {/* sidebar with slide-in animation */}
       <motion.div
         style={{ x: sidebarX }}
         className="
@@ -68,14 +60,14 @@ export default function ProjectsSection() {
         </h2>
       </motion.div>
 
-      {/* 2. 右側のメインコンテンツ領域 */}
+      {/* main contents*/}
       <div className="
         flex-grow
         overflow-hidden
         pb-10
-        relative /* ★ 6. ボタンを絶対配置するための基準点として 'relative' を追加 */
+        relative
       ">
-        {/* "PROJECTS" のタイトル with fade-in animation */}
+        {/* Project Title */}
         <motion.h2
           style={{ opacity: titleOpacity }}
           initial={{ opacity: 0, x: -100 }}
@@ -93,7 +85,6 @@ export default function ProjectsSection() {
           PROJECTS
         </motion.h2>
 
-        {/* 2色のライン with slide-in animation */}
         <motion.div
           initial={{ scaleX: 0 }}
           whileInView={{ scaleX: 1 }}
@@ -107,10 +98,8 @@ export default function ProjectsSection() {
             mb-16
           "
         ></motion.div>
-        {/* ▲▲▲ ここまで ▲▲▲ */}
 
-        {/* ▼▼▼ 7. < > ボタンをここに追加 with animations ▼▼▼ */}
-        {/* 'PROJECTS' タイトルの右上に配置します */}
+        {/* next-prev buttons*/}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -119,7 +108,7 @@ export default function ProjectsSection() {
           className="absolute bottom-24 right-20 flex gap-4 z-10"
         >
           <motion.button
-            onClick={handlePrevious} // ★ 戻るロジックを紐付け
+            onClick={handlePrevious}
             whileHover={{ scale: 1.1, rotate: -5 }}
             whileTap={{ scale: 0.95 }}
             className="
@@ -131,10 +120,10 @@ export default function ProjectsSection() {
             "
             aria-label="Previous project"
           >
-            &lt; {/* < (小なり) を表示 */}
+            &lt;
           </motion.button>
           <motion.button
-            onClick={handleNext} // ★ 次へロジックを紐付け
+            onClick={handleNext}
             whileHover={{ scale: 1.1, rotate: 5 }}
             whileTap={{ scale: 0.95 }}
             className="
@@ -146,16 +135,12 @@ export default function ProjectsSection() {
             "
             aria-label="Next project"
           >
-            &gt; {/* > (大なり) を表示 */}
+            &gt;
           </motion.button>
         </motion.div>
-        {/* ▲▲▲ ここまで ▲▲▲ */}
 
-
-        {/* ★ 8. [0] だった部分を [currentIndex] に変更 */}
-        {/* これで、stateと連動して表示するプロジェクトが変わります */}
+        {/* Project Card */}
         <ProjectCard project={projectsData[currentIndex]} />
-
       </div>
     </section>
   );
