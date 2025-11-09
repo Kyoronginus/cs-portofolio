@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import ProjectCard from "./ProjectCard";
-import { projectsData } from "@/components/sections/Project/projects";
+import { projectsData } from "@/components/sections/Project/projectProps";
 
 export default function ProjectsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);

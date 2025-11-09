@@ -3,10 +3,10 @@
 import YouTubeFacade from "../../YoutubeFacade";
 import Image from "next/image";
 import Model from "../../3d/Model";
-import { type Project } from "./projects";
+import { type ProjectProps } from "./projectProps";
 import { motion, AnimatePresence } from "framer-motion";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project }: { project: ProjectProps }) {
     const { ModelComponent } = project;
     
     return (

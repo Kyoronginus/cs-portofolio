@@ -5,7 +5,7 @@ import { Model as mimuchiModel } from "../../3d/jsxModels/mimuchi";
 
 
 
-export type Project = {
+export type ProjectProps = {
     id: number;
     title: string;
     videoId: string;
@@ -28,7 +28,7 @@ export type Project = {
     liveSiteUrl: string;
 };
 
-export const projectsData: Project[] = [
+export const projectsData: ProjectProps[] = [
     {
         id: 1,
         title: "UCHINOKO KAWAII",
