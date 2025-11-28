@@ -92,7 +92,7 @@ export default function ProjectCard({ project }: { project: ProjectProps }) {
                                 </Model>
                             ) : (
                                 <div className="w-full aspect-square bg-gray-700/50 rounded-lg flex items-center justify-center">
-                                    <p>3D Model</p>
+                                    <p> </p>
                                 </div>
                             )}
 

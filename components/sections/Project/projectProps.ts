@@ -68,8 +68,8 @@ export const projectsData: ProjectProps[] = [
         //     height: 300,
         //     className: "z-0 mr-5 animate-rotate-stepped pointer-events-none"
         // },
-        description: "A web application that analyzes images to detect and visualize Fibonacci spirals in compositions. The app identifies key points in an image using contour detection by OpenCV, clusters them, and fits a logarithmic spiral that approximates the golden ratio. ",
-        techstacks: ["Rust Axum", "FastAPI", "GCP", "Docker", "Monte Carlo analysis model"],
+        description: "A web application that analyzes images to detect and visualize Fibonacci spirals in compositions. The app identifies key points in an image using contour detection, clusters them, and fits a logarithmic spiral that approximates the golden ratio. ",
+        techstacks: ["Rust Axum","Monte Carlo analysis model","GCP", "Docker", ],
         // modelComponentName: "FibonacciModel",
         ModelComponent : fibonacciModel,
         liveSiteUrl: "https://fibonacci-spiral-detecti-bf743.web.app/",
@@ -78,24 +78,24 @@ export const projectsData: ProjectProps[] = [
     {
         id: 3,
         title: "ColorAnalyzer",
-        videoId: "3C9SHhFAqSw",
+        videoId: "WgfWl1uv_JA",
         mascotVideo: {
             src: "/images/github_cat.png",
             width: 500,
             height: 500,
             className: "absolute -z-10 -mt-100 top-0 right-0 animate-slide-horizontal pointer-events-none"
         },
-        mascotTitle: {
-            src: "/images/venna_chibi_akuma.png",
-            width: 300,
-            height: 300,
-            className: "z-0 mr-5 animate-rotate-stepped pointer-events-none"
-        },
+        // mascotTitle: {
+        //     src: "/images/venna_chibi_akuma.png",
+        //     width: 300,
+        //     height: 300,
+        //     className: "z-0 mr-5 animate-rotate-stepped pointer-events-none"
+        // },
         description: "A web application built to optimize the color palettes within my illustration workflow. This tool provides visual data analysis of colors from any uploaded image, allowing me, as a part-time illustrator, to generate harmonious color schemes and deliver higher-quality, visually consistent artwork to clients.",
-        techstacks: ["Python Flask", "GCP", "Docker", "Three.js", "PyQt"],
+        techstacks: ["Flask", "GCP", "React", "Vercel", "Docker", "Three.js", "PyQt"],
         // modelComponentName: "MimuchiModel",
         ModelComponent : mimuchiModel,
-        liveSiteUrl: "https://coloranalyzer-648561351861.us-central1.run.app/",
+        liveSiteUrl: "https://kyoronginus-color-analyzer.vercel.app/",
     },
 
     {
@@ -117,7 +117,7 @@ export const projectsData: ProjectProps[] = [
         description: "SchedulingApp is a Collaborative Calendar platform designed to streamline team schedule management by leveraging advanced AWS serverless architecture. Built on AWS Amplify, the application integrates core AWS services to deliver a seamless, efficient, and real-time scheduling experience. Key features include Real-Time Schedule Synchronization via AWS AppSync and a GraphQL API, ensuring instant updates across all team members. Integrated Authentication managed by Amazon Cognito provides secure user registration and identity management. All scheduling data is stored in the highly scalable, non-relational Amazon DynamoDB, while user assets and multimedia files are managed by Static Storage in Amazon S3. Business Logic is handled by serverless AWS Lambda functions, which act as linked providers for complex tasks and notifications. Finally, all system activities are logged and monitored in Amazon CloudWatch, enabling efficient debugging and operational health checks.",
         techstacks: ["Flutter", "AWS", "AWS S3", "AWS DynamoDB",  "AWS Cognito", "AWS Amplify", "GraphQL",],
         // modelComponentName: "MimuchiModel",
-        ModelComponent : mimuchiModel,
+        ModelComponent : null,
         liveSiteUrl: "https://github.com/Kyoronginus/schedulingapp",
     },
 ];
