@@ -77,7 +77,7 @@ export default function HeroSection() {
                 className="
               text-[10rem] xl:text-[14rem]
               font-bold text-left
-              text-transparent bg-clip-text
+              bg-clip-text
               bg-[repeating-linear-gradient(135deg,#ffffff,#ffffff_3px,transparent_3px,transparent_8px)]
               leading-none
             "
@@ -93,9 +93,12 @@ export default function HeroSection() {
                     <p>SATO</p>
 
                     {/* This <div> is pushed to the far right */}
-                    <div className="text-lg text-right text-white ">
+                    <div className="text-lg text-right text-white">
                       <p className=''>sometimes</p>
-                      <p className='font-bold text-6xl'>ARTIST</p>
+                      <div className='flex gap-2 justify-end'>
+                        <p className='font-bold text-3xl'>ARTIST</p>
+                        <p className=''>mostly</p>
+                      </div>
                       <p className='font-bold text-8xl'> DEVELOPER</p>
                     </div>
                   </div>

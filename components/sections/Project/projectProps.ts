@@ -29,37 +29,6 @@ export type ProjectProps = {
 export const projectsData: ProjectProps[] = [
   {
     id: 1,
-    title: "UCHINOKO KAWAII",
-    videoId: "XtBh7hxNGUM",
-    mascotVideo: {
-      src: "/images/github_cat.png",
-      width: 500,
-      height: 500,
-      className:
-        "absolute -z-10 -mt-100 top-0 right-0 animate-slide-horizontal pointer-events-none",
-    },
-    mascotTitle: {
-      src: "/images/venna_chibi.png",
-      width: 300,
-      height: 300,
-      className: "z-0 mr-10 animate-rotate-stepped pointer-events-none",
-    },
-    description:
-      "This project is an interactive website built to showcase the charm of my Original Character, Venna. It combines the retro aesthetic of 2D pixel art with modern 3D graphics and physics to create immersive visuals. All assets in this project were created by myself. Three.js is the core of this project, demonstrates a deep understanding of scene setup, lighting, shadows, materials, and managing 3D objects. Additional technologies such as draco-compression extraction and the usage of .webp to shorten the page loading time are applied.",
-    techstacks: [
-      "Three.js",
-      "Cannon.es",
-      "HTML",
-      "Netlify",
-      "Blender",
-      "Photoshop",
-    ],
-    // modelComponentName: "InteractiveModel",
-    ModelComponent: chibiModel,
-    liveSiteUrl: "https://uchinokokawaii.netlify.app/",
-  },
-  {
-    id: 2,
     title: "Oekakusa",
     videoId: "zBb6tFHSr8s",
     mascotVideo: {
@@ -90,7 +59,63 @@ export const projectsData: ProjectProps[] = [
     liveSiteUrl: "https://oekakusa.web.app/",
   },
   {
+    id: 2,
+    title: "Bangunin",
+    videoId: "U_UKmGLmW_A",
+    mascotVideo: {
+      src: "/images/github_cat.png",
+      width: 500,
+      height: 500,
+      className:
+        "absolute -z-10 -mt-100 top-0 right-0 animate-slide-horizontal pointer-events-none",
+    },
+    mascotTitle: {
+      src: "",
+      width: 0,
+      height: 0,
+      className: "",
+    },
+    description: "A location-based alarm for 9-to-5 train commuters that rings only when they're near their destination station, so they'll never miss their stop. Designed for everyday commuters, Bangunin automatically activates your alarm as soon as you arrive at your regular departure station. This eliminates the need to manually set and deactivate alarms, ensuring you wake up exactly when needed. This iOS application also has a companion app that displays the active alarm, delivers sound and haptic alerts upon arrival, and lets commuters stop the alarm directly from their wrist. As a tech team member, I contributed in managing all git branches including code review, and resolve merge conflicts. Besides that, I was also responsible for implementing the location based function of the application.",
+    techstacks: [
+      "SwiftUI", "CoreLocation", "AlarmKit"
+    ],
+    ModelComponent: null,
+    liveSiteUrl: "https://github.com/Kyoronginus/Bangunin",
+  },
+  {
     id: 3,
+    title: "UCHINOKO KAWAII",
+    videoId: "XtBh7hxNGUM",
+    mascotVideo: {
+      src: "/images/github_cat.png",
+      width: 500,
+      height: 500,
+      className:
+        "absolute -z-10 -mt-100 top-0 right-0 animate-slide-horizontal pointer-events-none",
+    },
+    mascotTitle: {
+      src: "/images/venna_chibi.png",
+      width: 300,
+      height: 300,
+      className: "z-0 mr-10 animate-rotate-stepped pointer-events-none",
+    },
+    description:
+      "This project is an interactive website built to showcase the charm of my Original Character, Venna. It combines the retro aesthetic of 2D pixel art with modern 3D graphics and physics to create immersive visuals. All assets in this project were created by myself. Three.js is the core of this project, demonstrates a deep understanding of scene setup, lighting, shadows, materials, and managing 3D objects. Additional technologies such as draco-compression extraction and the usage of .webp to shorten the page loading time are applied.",
+    techstacks: [
+      "Three.js",
+      "Cannon.es",
+      "HTML",
+      "Netlify",
+      "Blender",
+      "Photoshop",
+    ],
+    // modelComponentName: "InteractiveModel",
+    ModelComponent: chibiModel,
+    liveSiteUrl: "https://uchinokokawaii.netlify.app/",
+  },
+
+  {
+    id: 4,
     title: "Fibonacci Spiral Detection",
     videoId: "V0SFSW5l_6s",
     mascotVideo: {
@@ -112,39 +137,6 @@ export const projectsData: ProjectProps[] = [
     // modelComponentName: "FibonacciModel",
     ModelComponent: fibonacciModel,
     liveSiteUrl: "https://fibonacci-spiral-detecti-bf743.web.app/",
-  },
-
-  {
-    id: 4,
-    title: "ColorAnalyzer",
-    videoId: "WgfWl1uv_JA",
-    mascotVideo: {
-      src: "/images/github_cat.png",
-      width: 500,
-      height: 500,
-      className:
-        "absolute -z-10 -mt-100 top-0 right-0 animate-slide-horizontal pointer-events-none",
-    },
-    // mascotTitle: {
-    //     src: "/images/venna_chibi_akuma.png",
-    //     width: 300,
-    //     height: 300,
-    //     className: "z-0 mr-5 animate-rotate-stepped pointer-events-none"
-    // },
-    description:
-      "A web application built to optimize the color palettes within my illustration workflow. This tool provides visual data analysis of colors from any uploaded image, allowing me, as a part-time illustrator, to generate harmonious color schemes and deliver higher-quality, visually consistent artwork to clients.",
-    techstacks: [
-      "Flask",
-      "GCP",
-      "React",
-      "Vercel",
-      "Docker",
-      "Three.js",
-      "PyQt",
-    ],
-    // modelComponentName: "MimuchiModel",
-    ModelComponent: mimuchiModel,
-    liveSiteUrl: "https://kyoronginus-color-analyzer.vercel.app/",
   },
 
   {

@@ -1,5 +1,7 @@
 // components/sections/CertificationSection.tsx
 import { certificationData, CertificationProps } from "./CertificationProps";
+import { motion, useScroll, useTransform } from 'framer-motion';
+import Image from 'next/image';
 
 function CertificationItem({ certification, index }: { certification: CertificationProps, index: number }) {
   return (
@@ -18,11 +20,23 @@ function CertificationItem({ certification, index }: { certification: Certificat
 
 export default function CertificationSection() {
   return (
+    
     <section
       id="certification"
-      className="min-h-screen flex flex-col items-center justify-center bg-black text-white py-20"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-black text-white py-20 overflow-hidden"
     >
-      <div className="container mx-auto px-6">
+      <div
+        className="absolute inset-0"
+      >
+        <Image
+          src="/images/oki.jpg"
+          alt="Hero background image"
+          fill
+          style={{ objectFit: 'cover' }}
+          className="opacity-10 blur-xs"
+        />
+      </div>
+      <div className="relative z-10 container mx-auto px-6">
         <h2 className="text-[7rem] xl:text-[7rem]
               font-bold text-center
               text-transparent bg-clip-text

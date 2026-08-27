@@ -79,7 +79,7 @@ export default function ProjectsSection() {
             px-6 md:px-12
             text-transparent bg-clip-text
             bg-[repeating-linear-gradient(135deg,#808080_0px,#808080_3px,transparent_3px,transparent_12px)]
-            -mt-2 -z-20
+            -mt-2 -z-20 
           "
         >
           PROJECTS
