@@ -94,12 +94,12 @@ export default function HeroSection() {
 
                     {/* This <div> is pushed to the far right */}
                     <div className="text-lg text-right text-white">
-                      <p className=''>sometimes</p>
+                      {/* <p className=''>sometimes</p>
                       <div className='flex gap-2 justify-end'>
                         <p className='font-bold text-3xl'>ARTIST</p>
                         <p className=''>mostly</p>
-                      </div>
-                      <p className='font-bold text-8xl'> DEVELOPER</p>
+                      </div> */}
+                      <p className='font-bold text-4xl'> DEVELOPER</p>
                     </div>
                   </div>
                 </div>
