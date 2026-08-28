@@ -60,6 +60,28 @@ export const projectsData: ProjectProps[] = [
   },
   {
     id: 2,
+    title: "BuDe",
+    videoId: "upW8KZrBRPo",
+    mascotVideo: {
+      src: "/images/github_cat.png",
+      width: 0,
+      height: 0,
+      className: "",
+    },
+    mascotTitle: {
+      src: "",
+      width: 0,
+      height: 0,
+      className: "",
+    },
+    description: "BuDe is an iOS application designed to analyze the quality and condition of food ingredients in real-time. By leveraging on-device machine learning and the device's camera, the app detects ingredients, categorizes their health status, and provides actionable handling tips. As a tech-team member, I contributed in creating >300 potato images with localization mask, and frontend development using SwiftUI, utilizing MVVM architecture.",
+    techstacks: ["SwiftUI", "CoreML", "Vision","Python"],
+    ModelComponent: null,
+    liveSiteUrl: "https://github.com/Kyoronginus/BuDe",
+  },
+
+  {
+    id: 3,
     title: "Bangunin",
     videoId: "U_UKmGLmW_A",
     mascotVideo: {
@@ -77,13 +99,13 @@ export const projectsData: ProjectProps[] = [
     },
     description: "A location-based alarm for 9-to-5 train commuters that rings only when they're near their destination station, so they'll never miss their stop. Designed for everyday commuters, Bangunin automatically activates your alarm as soon as you arrive at your regular departure station. This eliminates the need to manually set and deactivate alarms, ensuring you wake up exactly when needed. This iOS application also has a companion app that displays the active alarm, delivers sound and haptic alerts upon arrival, and lets commuters stop the alarm directly from their wrist. As a tech team member, I contributed in managing all git branches including code review, and resolve merge conflicts. Besides that, I was also responsible for implementing the location based function of the application.",
     techstacks: [
-      "SwiftUI", "CoreLocation", "AlarmKit"
+      "SwiftUI", "CoreLocation", "AlarmKit", "SwiftData"
     ],
     ModelComponent: null,
     liveSiteUrl: "https://github.com/Kyoronginus/Bangunin",
   },
   {
-    id: 3,
+    id: 4,
     title: "UCHINOKO KAWAII",
     videoId: "XtBh7hxNGUM",
     mascotVideo: {
@@ -115,7 +137,7 @@ export const projectsData: ProjectProps[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Fibonacci Spiral Detection",
     videoId: "V0SFSW5l_6s",
     mascotVideo: {
@@ -140,7 +162,7 @@ export const projectsData: ProjectProps[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "SchedulingApp",
     videoId: "hpGjd8psILc",
     mascotVideo: {

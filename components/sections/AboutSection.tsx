@@ -93,7 +93,7 @@ export default function AboutSection() {
                   <p>
                     My journey in tech has led me to explore various domains including <span className="font-bold text-white">web development</span>,
                     <span className="font-bold text-white"> Data Science</span>, and <span className="font-bold text-white">3D graphics</span>.
-                    However, I've been exploring the world of frontend development recently, building website interfaces that provides immersive experience for the users.
+                    However, I've been exploring the world of web & software development recently, building interfaces that provides immersive experience for the users.
                   </p>
                   <p>Outside of code, growing up between Japan and Indonesia has given me a deep appreciation for diverse cultures and new experiences. Always open to chatting about tech, design, or your latest project—feel free to reach out, I'd love to connect.</p>
                   <p>
