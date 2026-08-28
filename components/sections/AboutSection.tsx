@@ -43,7 +43,7 @@ export default function AboutSection() {
       </motion.div>
 
       {/* 2. Main content area */}
-      <div className="ml-[50] my-20 flex-grow relative overflow-hidden py-10 w-full flex justify-center">
+      <div className="my-20 flex-grow relative overflow-hidden py-10 w-full flex justify-center">
         
         {/* Shared max-width container for Title and Content */}
         <div className="w-full max-w-[1600px] px-6 md:px-12">
@@ -95,7 +95,7 @@ export default function AboutSection() {
                     <span className="font-bold text-white"> Data Science</span>, and <span className="font-bold text-white">3D graphics</span>.
                     However, I've been exploring the world of frontend development recently, building website interfaces that provides immersive experience for the users.
                   </p>
-                  <p>Having lived in Japan for eight years before moving to Indonesia, I developed a multi-perspective approach to thinking and socializing. Let's work together on your next groundbreaking project.</p>
+                  <p>Outside of code, growing up between Japan and Indonesia has given me a deep appreciation for diverse cultures and new experiences. Always open to chatting about tech, design, or your latest project—feel free to reach out, I'd love to connect.</p>
                   <p>
 
                   </p>

@@ -170,7 +170,7 @@ export default function ContactSection() {
             </p>
             <div className='mb-2'>
               <p className="text-lg">
-                THIS SITE HAS BEEN CREATED USING <span className="font-bold text-white">NEXT.JS</span> BY
+                THIS SITE HAS BEEN CREATED BY
               </p>
               <p className='text-8xl font-bold text-gray-300'> DJUNAEDI </p>
             </div>
